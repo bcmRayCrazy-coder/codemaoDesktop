@@ -1,0 +1,15 @@
+{
+  "name": "codemaodesktop",
+  "version": "1.0.0",
+  "description": "桌面上的编程猫社区",
+  "main": "main.js",
+  "scripts": {
+    "test": "node main.js"
+  },
+  "keywords": [
+    "codemao",
+    "electron"
+  ],
+  "author": "bcmray_crazy",
+  "license": "ISC"
+}
