@@ -46,7 +46,8 @@ export default {
           if(res.status == 200){
             this.state = "登录成功";
             localStorage.setItem("token",data.auth.token);
-            console.log(localStorage.getItem("token"));
+            localStorage.setItem("user_info",JSON.stringify(data.user_info));
+            localStorage.setItem("isLogin","true");
             this.$router.push('/main');
           }else{
             this.state = "登录失败,用户或密码错误";

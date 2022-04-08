@@ -12,3 +12,9 @@ export default {
   layout: 'blog' // you can set a custom layout for the error page
 }
 </script>
+<style>
+.container {
+  text-align: center;
+  padding: 100px;
+}
+</style>

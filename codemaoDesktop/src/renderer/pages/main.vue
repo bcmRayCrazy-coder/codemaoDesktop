@@ -27,7 +27,7 @@ export default {
 .e-nuxt-content{
     display: flex;
     justify-content: space-around;
-    padding-top: 100px;
+    padding-top: 80px;
     align-items: flex-start;
     flex-wrap: wrap;
 }
