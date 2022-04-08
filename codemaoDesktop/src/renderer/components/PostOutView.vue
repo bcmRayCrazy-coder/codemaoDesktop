@@ -1,5 +1,5 @@
 <template>
-    <div class="post_wrapper">
+    <div class="compenent_post_wrapper">
         <p class="post_title">{{author.nickname}} : {{title}} </p>
         <p class="post_content" id="content"></p>
         <NuxtLink :to="`/post/${id}`">
@@ -35,7 +35,7 @@ export default {
 }
 </script>
 <style>
-.post_wrapper{
+.compenent_post_wrapper{
     margin-top: 30px;
 }
 .post_title{

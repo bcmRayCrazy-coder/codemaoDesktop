@@ -4,7 +4,13 @@
   >
       <p class="title">{{title}}</p>
       <div class="user-info-wrapper" v-if="isLogin">
-        <p>{{nickname}}</p>
+        <p> 
+          <v-avatar
+              size="20px"
+              color="orange"
+          >
+              <img :src="mUser_info.avatar_url" alt="头像加载中">
+          </v-avatar>{{nickname}}</p>
       </div>
       <NuxtLink class="user-info-wrapper" v-if="!isLogin" to="/login">
         <p>未登录(若已登录,请刷新页面)</p>
@@ -38,6 +44,8 @@
 
 <script>
 import { ipcRenderer } from 'electron';
+import UserOutView from '~/components/UserOutView.vue'
+
 var mIsLogin = false;
 var mUser_info = {
   nickname:""
@@ -52,7 +60,8 @@ export default {
     return {
         title:"编程猫桌面",
         nickname: mUser_info.nickname,
-        isLogin: mIsLogin
+        isLogin: mIsLogin,
+        mUser_info
     }
   },
   methods:{
@@ -65,6 +74,9 @@ export default {
     toUrl(url){
         this.$router.push(url);
     }
+  },
+  components:{
+    UserOutView
   }
 }
 </script>
