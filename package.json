@@ -1,15 +1,44 @@
 {
-  "name": "codemaodesktop",
-  "version": "1.0.0",
-  "description": "桌面上的编程猫社区",
-  "main": "main.js",
-  "scripts": {
-    "test": "node main.js"
-  },
-  "keywords": [
-    "codemao",
-    "electron"
-  ],
-  "author": "bcmray_crazy",
-  "license": "ISC"
+    "name": "codemaodesktop",
+    "version": "1.0.0",
+    "description": "桌面上的编程猫社区",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron --trace-warnings .",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
+    },
+    "keywords": [
+        "codemao",
+        "electron"
+    ],
+    "author": "bcmray_crazy",
+    "license": "ISC",
+    "dependencies": {},
+    "build": {
+        "appId": "com.bcmray.codemaodesktop",
+        "asar": true,
+        "asarUnpack": "./node_modules/electron-packager/out/asarUnpack.js",
+        "directories": {
+            "output": "dist"
+        },
+        "win": {
+            "icon": "src/static/icons/icon.ico"
+        },
+        "mac": {
+            "icon": "src/static/icons/icon.icns",
+            "target": [
+                "dmg",
+                "zip"
+            ]
+        },
+        "linux": {
+            "icon": "src/static/icons/icon.png",
+            "target": [
+                "deb",
+                "rpm",
+                "zip"
+            ]
+        }
+    }
 }
