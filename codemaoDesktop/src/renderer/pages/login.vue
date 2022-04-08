@@ -60,6 +60,13 @@ export default {
       toUrl(url){
           this.$router.push(url);
       }
+  },
+  mounted() {
+     this.$nextTick(()=>{
+         if(localStorage.getItem("isLogin") == "true"){
+             this.$router.push('/main');
+         }
+     });
   }
 }
 </script>
