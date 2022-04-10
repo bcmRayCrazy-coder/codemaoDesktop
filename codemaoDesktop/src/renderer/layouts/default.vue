@@ -1,6 +1,6 @@
 <template>
   <div>
-    <AppHeader />
+    <AppHeader class="app-header" />
     <nuxt />
   </div>
 </template>
@@ -18,5 +18,9 @@ export default {
 <style>
 body {
   margin: 0 !important;
+}
+.app-header{
+  position: fixed;
+  z-index: 100;
 }
 </style>
