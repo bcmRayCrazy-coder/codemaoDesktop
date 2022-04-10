@@ -1,4 +1,4 @@
-# codemao_desktop
+# codemao desktop
 
 > 桌面上的编程猫社区
 

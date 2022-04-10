@@ -4,6 +4,7 @@
  * @link {https://nuxtjs.org/guide/configuration/}
  */
 
+const colors = require("vuetify/lib/util/colors");
 
 module.exports = {
     ssr: false,
@@ -16,7 +17,6 @@ module.exports = {
     plugins: [
         { ssr: true, src: '@/plugins/icons.js' },
         '~/plugins/axios.js'
-
     ],
     axios: {
         proxy: {
@@ -38,23 +38,16 @@ module.exports = {
         '@nuxtjs/axios',
     ],
     vuetify: {
+        customVariables: ['~/assets/colors.scss'],
         theme: {
+            light: true,
             themes: {
                 light: {
-                    primary: "#ffc107",
-                    secondary: "#ff9800",
-                    accent: "#ffeb3b",
-                    error: "#f44336",
-                    warning: "#cddc39",
-                    info: "#03a9f4",
-                    success: "#4caf50"
-                },
-                dark: {
-                    primary: "#ffc107",
-                    secondary: "#ff9800",
-                    accent: "#ffeb3b",
-                    error: "#f44336",
-                    warning: "#cddc39",
+                    primary: colors.amber.lighten1,
+                    secondary: colors.orange.lighten1,
+                    accent: colors.amber.accent1,
+                    error: colors.red.lighten1,
+                    warning: colors.yellow.lighten1,
                     info: "#03a9f4",
                     success: "#4caf50"
                 }

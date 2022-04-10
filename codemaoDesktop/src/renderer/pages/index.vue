@@ -22,6 +22,7 @@
       <v-btn class="btn-second" @click="openURL('https://nuxtjs.org/guide')">
         官网
       </v-btn>
+      <v-btn color="primary" @click="toUrl('/aaa')">404测试</v-btn>
     </div>
   </div>
 </template>
